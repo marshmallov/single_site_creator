@@ -1,0 +1,58 @@
+{
+  "site": {
+    "title": "My Website",
+    "description": "Welcome to my awesome website",
+    "logo": "/logo.png"
+  },
+  "hero": {
+    "title": "Welcome to Our Website",
+    "subtitle": "Creating amazing experiences for our users",
+    "backgroundImage": "/images/hero1.jpg",
+    "buttonText": "Get Started",
+    "buttonLink": "#about"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "We are a team of passionate professionals dedicated to creating exceptional digital experiences. Our mission is to help businesses grow through innovative web solutions.",
+    "image": "/about-image.jpg",
+    "backgroundImage": "/images/hero2.jpg"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Custom websites and web applications",
+        "icon": "🌐",
+        "backgroundImage": "/images/white1.jpg"
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "SEO, social media, and online advertising",
+        "icon": "📈",
+        "backgroundImage": "/images/white1.jpg"
+      },
+      {
+        "title": "Consulting",
+        "description": "Strategic planning and business growth",
+        "icon": "💡",
+        "backgroundImage": "/images/white1.jpg"
+      }
+    ],
+    "backgroundImage": "/images/hero3.jpg"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "contact@example.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Main St, City, State 12345",
+    "backgroundImage": "/images/hero4.jpg"
+  },
+  "images": {
+    "hero1": "/images/hero1.jpg",
+    "hero2": "/images/hero2.jpg",
+    "hero3": "/images/hero3.jpg",
+    "hero4": "/images/hero4.jpg",
+    "white1": "/images/white1.jpg"
+  }
+}

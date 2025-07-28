@@ -62,34 +62,44 @@ export default async function MainPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20" style={{
-        backgroundImage: `url(${settings.services.backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">{settings.services.title}</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {settings.services.items.map((service, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow text-white"
-                style={{
-                  backgroundImage: `url(${service.backgroundImage})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundColor: '',
-                  backgroundBlendMode: 'overlay',
-                }}
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
-          </div>
+      <section
+  id="services"
+  className="py-20"
+  style={{
+    backgroundImage: `url(${settings.services.backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+>
+  <div className="container mx-auto px-4">
+    <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      {settings.services.title}
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-8">
+      {settings.services.items.map((service, index) => (
+        <div
+          key={index}
+          className="p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow text-white w-full max-w-sm"
+          style={{
+            backgroundImage: `url(${service.backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundBlendMode: 'overlay',
+          }}
+        >
+          <div className="text-4xl mb-4">{service.icon}</div>
+          <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+            {service.title}
+          </h3>
+          <p className="text-gray-600">{service.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50" style={{

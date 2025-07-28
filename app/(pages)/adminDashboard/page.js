@@ -71,7 +71,28 @@ export default function AdminDashboard() {
 
     setSettings(newSettings)
   }
-
+  const updateServiceCount = (count) => {
+    const current = settings.services.items || [];
+    const newCount = Math.max(1, count); // prevent 0 or negative numbers
+  
+    let updatedItems = [...current];
+  
+    if (newCount > current.length) {
+      // Add new empty service objects
+      const additional = Array(newCount - current.length).fill().map(() => ({
+        title: '',
+        description: '',
+        icon: '',
+        backgroundImage: '',
+      }));
+      updatedItems = [...updatedItems, ...additional];
+    } else if (newCount < current.length) {
+      // Trim the array
+      updatedItems = updatedItems.slice(0, newCount);
+    }
+  
+    updateNestedSetting('services.items', updatedItems);
+  };
   const updateServiceItem = (index, field, value) => {
     const newSettings = { ...settings }
     newSettings.services.items[index][field] = value
@@ -238,6 +259,17 @@ export default function AdminDashboard() {
           </div>
 
           {/* Services Section */}
+          <div className="mb-4">{/*numbers of services*/}
+            <label className="block text-black text-sm font-medium mb-2">Number of Services</label>
+            <input
+              type="number"
+              min={1}
+              value={settings.services.items.length}
+              onChange={(e) => updateServiceCount(parseInt(e.target.value))}
+              className="text-black w-32 px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
           <div className="text-black bg-white mb-8">
             <h2 className="text-xl font-semibold mb-4">Services Section</h2>
             <div className="mb-4">
@@ -251,67 +283,67 @@ export default function AdminDashboard() {
             </div>
 
             <div className="space-y-4">
-            {settings?.services?.items?.map((service, index) => (
-  <div key={index} className="border p-4 rounded">
-    <h3 className="font-medium mb-2">Service {index + 1}</h3>
-    <div className="grid md:grid-cols-3 gap-4">
-      <div>
-        <label className="block text-sm font-medium mb-1">Icon</label>
-        <input
-          type="text"
-          value={service.icon}
-          onChange={(e) => updateServiceItem(index, 'icon', e.target.value)}
-          className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-      <div>
-        <label className="block text-sm font-medium mb-1">Title</label>
-        <input
-          type="text"
-          value={service.title}
-          onChange={(e) => updateServiceItem(index, 'title', e.target.value)}
-          className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-      <div>
-        <label className="block text-sm font-medium mb-1">Description</label>
-        <textarea
-          value={service.description}
-          onChange={(e) => updateServiceItem(index, 'description', e.target.value)}
-          className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
-          rows="2"
-        />
-      </div>
+              {settings?.services?.items?.map((service, index) => (
+                <div key={index} className="border p-4 rounded">
+                  <h3 className="font-medium mb-2">Service {index + 1}</h3>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Icon</label>
+                      <input
+                        type="text"
+                        value={service.icon}
+                        onChange={(e) => updateServiceItem(index, 'icon', e.target.value)}
+                        className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Title</label>
+                      <input
+                        type="text"
+                        value={service.title}
+                        onChange={(e) => updateServiceItem(index, 'title', e.target.value)}
+                        className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Description</label>
+                      <textarea
+                        value={service.description}
+                        onChange={(e) => updateServiceItem(index, 'description', e.target.value)}
+                        className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                        rows="2"
+                      />
+                    </div>
 
-      {/* ✅ Background image dropdown */}
-      <div className="md:col-span-3">
-        <label className="block text-sm font-medium mb-1">Background Image</label>
-        <select
-          value={service.backgroundImage || ''}
-          onChange={(e) =>
-            updateNestedSetting(`services.items.${index}.backgroundImage`, e.target.value)
-          }
-          className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500 text-black"
-        >
-          <option value="">Select an image</option>
-          {Object.entries(settings?.images || {}).map(([key, path]) => (
-            <option key={key} value={path}>
-              {key} ({path})
-            </option>
-          ))}
-        </select>
+                    {/* ✅ Background image dropdown */}
+                    <div className="md:col-span-3">
+                      <label className="block text-sm font-medium mb-1">Background Image</label>
+                      <select
+                        value={service.backgroundImage || ''}
+                        onChange={(e) =>
+                          updateNestedSetting(`services.items.${index}.backgroundImage`, e.target.value)
+                        }
+                        className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500 text-black"
+                      >
+                        <option value="">Select an image</option>
+                        {Object.entries(settings?.images || {}).map(([key, path]) => (
+                          <option key={key} value={path}>
+                            {key} ({path})
+                          </option>
+                        ))}
+                      </select>
 
-        {service.backgroundImage && (
-          <img
-            src={service.backgroundImage}
-            alt={`Service ${index + 1} Preview`}
-            className="mt-2 h-32 object-cover rounded border"
-          />
-        )}
-      </div>
-    </div>
-  </div>
-))}
+                      {service.backgroundImage && (
+                        <img
+                          src={service.backgroundImage}
+                          alt={`Service ${index + 1} Preview`}
+                          className="mt-2 h-32 object-cover rounded border"
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
               <BackgroundImageSelector
                 section="services"
                 label="Services Background Image"

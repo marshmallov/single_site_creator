@@ -27,16 +27,34 @@
         "backgroundImage": "/images/white1.jpg"
       },
       {
-        "title": "Digital Marketing",
-        "description": "SEO, social media, and online advertising",
-        "icon": "📈",
+        "title": "something ",
+        "description": "something was somthing ",
+        "icon": "A",
         "backgroundImage": "/images/white1.jpg"
       },
       {
-        "title": "Consulting",
-        "description": "Strategic planning and business growth",
-        "icon": "💡",
-        "backgroundImage": "/images/white1.jpg"
+        "title": "asd",
+        "description": "asdads",
+        "icon": "a",
+        "backgroundImage": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "icon": "",
+        "backgroundImage": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "icon": "",
+        "backgroundImage": ""
+      },
+      {
+        "title": "",
+        "description": "",
+        "icon": "",
+        "backgroundImage": ""
       }
     ],
     "backgroundImage": "/images/hero3.jpg"

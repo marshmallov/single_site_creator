@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import BackgroundImageSelector from '../../components/BackgrounImageSelector'
 import ServiceImageSelector from '../../components/ServiceImageSelector'
+import SingleImageSelector from '@/app/components/SingleImageSelector'
 
 export default function AdminDashboard() {
   const { data: session, status } = useSession()
@@ -74,9 +75,9 @@ export default function AdminDashboard() {
   const updateServiceCount = (count) => {
     const current = settings.services.items || [];
     const newCount = Math.max(1, count); // prevent 0 or negative numbers
-  
+
     let updatedItems = [...current];
-  
+
     if (newCount > current.length) {
       // Add new empty service objects
       const additional = Array(newCount - current.length).fill().map(() => ({
@@ -90,7 +91,7 @@ export default function AdminDashboard() {
       // Trim the array
       updatedItems = updatedItems.slice(0, newCount);
     }
-  
+
     updateNestedSetting('services.items', updatedItems);
   };
   const updateServiceItem = (index, field, value) => {
@@ -169,6 +170,13 @@ export default function AdminDashboard() {
                   onChange={(e) => updateNestedSetting('site.description', e.target.value)}
                   className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
                 />
+                <input
+                  type="color"
+                  value={settings?.site?.titleColor || '#000000'}
+                  onChange={(e) => updateNestedSetting('site.titleColor', e.target.value)}
+                  className="w-16 h-10 p-0 border rounded"
+                />
+
               </div>
             </div>
           </div>
@@ -238,6 +246,12 @@ export default function AdminDashboard() {
                   onChange={(e) => updateNestedSetting('about.title', e.target.value)}
                   className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
                 />
+                <input
+                  type="color"
+                  value={settings?.about?.titleColor || '#000000'}
+                  onChange={(e) => updateNestedSetting('about.titleColor', e.target.value)}
+                  className="w-16 h-10 p-0 border rounded"
+                />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">About Content</label>
@@ -248,6 +262,13 @@ export default function AdminDashboard() {
                   rows="5"
                 />
               </div>
+              <SingleImageSelector
+                section="about"
+                label="About Top Image"
+                value={settings?.about?.image}
+                onChange={updateNestedSetting}
+                images={settings?.images}
+              />
               <BackgroundImageSelector
                 section="about"
                 label="About Background Image"
@@ -280,6 +301,13 @@ export default function AdminDashboard() {
                 onChange={(e) => updateNestedSetting('services.title', e.target.value)}
                 className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
               />
+              <input
+                type="color"
+                value={settings?.services?.titleColor || '#000000'}
+                onChange={(e) => updateNestedSetting('services.titleColor', e.target.value)}
+                className="w-16 h-10 p-0 border rounded"
+              />
+
             </div>
 
             <div className="space-y-4">
@@ -366,6 +394,13 @@ export default function AdminDashboard() {
                   onChange={(e) => updateNestedSetting('contact.title', e.target.value)}
                   className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
                 />
+                <input
+                  type="color"
+                  value={settings?.contact?.titleColor || '#000000'}
+                  onChange={(e) => updateNestedSetting('contact.titleColor', e.target.value)}
+                  className="w-16 h-10 p-0 border rounded"
+                />
+
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
@@ -403,6 +438,17 @@ export default function AdminDashboard() {
                 onChange={updateNestedSetting}
                 images={settings?.images}
               />
+              <div>
+                <label className="block text-sm font-medium mb-2">Show Contact Form</label>
+                <select
+                  value={settings?.contact?.showForm ? 'true' : 'false'}
+                  onChange={(e) => updateNestedSetting('contact.showForm', e.target.value === 'true')}
+                  className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="true">Show</option>
+                  <option value="false">Hide</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

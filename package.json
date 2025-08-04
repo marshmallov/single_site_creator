@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node app/generate-images.js",
     "dev": "next dev --turbopack",
     "build": "next build",
+    "prestart": "node app/generate-images.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,6 +14,7 @@
     "dotenv": "^16.5.0",
     "next": "15.3.2",
     "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

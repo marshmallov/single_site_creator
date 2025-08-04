@@ -6,6 +6,7 @@
   },
   "hero": {
     "title": "Welcome to Our Website",
+    "titleColor": "",
     "subtitle": "Creating amazing experiences for our users",
     "backgroundImage": "/images/hero1.jpg",
     "buttonText": "Get Started",
@@ -13,64 +14,59 @@
   },
   "about": {
     "title": "About Us",
+    "titleColor": "#000000",
     "content": "We are a team of passionate professionals dedicated to creating exceptional digital experiences. Our mission is to help businesses grow through innovative web solutions.",
-    "image": "/about-image.jpg",
-    "backgroundImage": "/images/hero2.jpg"
+    "image": "/images/portrait.jpg",
+    "backgroundImage": "/images/white.jpg"
   },
   "services": {
-    "title": "Our Services",
+    "title": "My services ",
+    "titleColor": "#ffffff",
     "items": [
       {
-        "title": "Web Development",
-        "description": "Custom websites and web applications",
-        "icon": "🌐",
-        "backgroundImage": "/images/white1.jpg"
-      },
-      {
-        "title": "something ",
-        "description": "something was somthing ",
-        "icon": "A",
-        "backgroundImage": "/images/white1.jpg"
-      },
-      {
-        "title": "asd",
-        "description": "asdads",
-        "icon": "a",
-        "backgroundImage": ""
-      },
-      {
-        "title": "",
-        "description": "",
+        "title": "Desinger",
+        "description": "I'm an artist front-end user experience designer translating creative visions into interactive realities through the crafting of diverse and innovative wireframe prototypes.",
         "icon": "",
-        "backgroundImage": ""
+        "backgroundImage": "/images/white.jpg"
       },
       {
-        "title": "",
-        "description": "",
+        "title": "Developer ",
+        "description": "I specialize in building interactive user interfaces, excelling in HTML, CSS, and JavaScript - leveraging libraries such asjQuery and Bootstrap. I harness modern frameworks such as React and CMS platforms such as Oracle Content Management.",
         "icon": "",
-        "backgroundImage": ""
+        "backgroundImage": "/images/white.jpg"
       },
       {
-        "title": "",
-        "description": "",
+        "title": "Media Production ",
+        "description": "In the highly competitive digital marketplace, creating captivating content is crucial. In addition to development, I can also leverage skills in image editing and video production to engage users effectively.",
         "icon": "",
-        "backgroundImage": ""
+        "backgroundImage": "/images/white.jpg"
+      },
+      {
+        "title": "SEO ",
+        "description": "I boost online presence and visibility through the implementation of SEO-optimized code and meta-data. I can further leverage SEO through social media branding and various SEO tools.",
+        "icon": "",
+        "backgroundImage": "/images/white.jpg"
       }
     ],
-    "backgroundImage": "/images/hero3.jpg"
+    "backgroundImage": "/images/black.jpg"
   },
   "contact": {
     "title": "Contact Us",
+    "titleColor": "#000000",
     "email": "contact@example.com",
     "phone": "+1 (555) 123-4567",
     "address": "123 Main St, City, State 12345",
-    "backgroundImage": "/images/hero4.jpg"
+    "backgroundImage": "/images/hero4.jpg",
+    "showForm": true
   },
   "images": {
+    "black": "/images/black.jpg",
+    "gray": "/images/gray.jpg",
     "hero1": "/images/hero1.jpg",
     "hero2": "/images/hero2.jpg",
     "hero3": "/images/hero3.jpg",
     "hero4": "/images/hero4.jpg",
-    "white1": "/images/white1.jpg"
+    "portrait": "/images/portrait.jpg",
+    "white": "/images/white.jpg"
   }
 }

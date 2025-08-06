@@ -238,8 +238,9 @@ export default function AdminDashboard() {
           <div className="text-black bg-white mb-8">
             <h2 className="text-xl font-semibold mb-4">About Section</h2>
             <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">About Title</label>
+
+              <div className="grid grid-cols-[150px_1fr_auto]">
+                <label className="text-sm font-medium mb-2">About Title</label>
                 <input
                   type="text"
                   value={settings?.about?.title || ''}
@@ -253,8 +254,9 @@ export default function AdminDashboard() {
                   className="w-16 h-10 p-0 border rounded"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">About Content</label>
+
+              <div className="grid grid-cols-[150px_1fr_auto]">
+                <label className="text-sm font-medium mb-2">About Content</label>
                 <textarea
                   value={settings?.about?.content || ''}
                   onChange={(e) => updateNestedSetting('about.content', e.target.value)}
@@ -262,6 +264,7 @@ export default function AdminDashboard() {
                   rows="5"
                 />
               </div>
+
               <SingleImageSelector
                 section="about"
                 label="About Top Image"
@@ -280,21 +283,11 @@ export default function AdminDashboard() {
           </div>
 
           {/* Services Section */}
-          <div className="mb-4">{/*numbers of services*/}
-            <label className="block text-black text-sm font-medium mb-2">Number of Services</label>
-            <input
-              type="number"
-              min={1}
-              value={settings.services.items.length}
-              onChange={(e) => updateServiceCount(parseInt(e.target.value))}
-              className="text-black w-32 px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
           <div className="text-black bg-white mb-8">
             <h2 className="text-xl font-semibold mb-4">Services Section</h2>
-            <div className="mb-4">
-              <label className="block text-sm font-medium mb-2">Services Title</label>
+
+            <div className="grid grid-cols-[150px_1fr_auto] mb-4">
+              <label className=" text-sm font-medium mb-2">Services Title</label>
               <input
                 type="text"
                 value={settings?.services?.title || ''}
@@ -310,13 +303,24 @@ export default function AdminDashboard() {
 
             </div>
 
+            <div className="mb-4">{/*numbers of services*/}
+              <label className=" text-black text-sm font-medium mb-2">Number of Services</label>
+              <input
+                type="number"
+                min={1}
+                value={settings.services.items.length}
+                onChange={(e) => updateServiceCount(parseInt(e.target.value))}
+                className="text-black w-32 px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
             <div className="space-y-4">
               {settings?.services?.items?.map((service, index) => (
                 <div key={index} className="border p-4 rounded">
                   <h3 className="font-medium mb-2">Service {index + 1}</h3>
                   <div className="grid md:grid-cols-3 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-1">Icon</label>
+                      <label className=" text-sm font-medium mb-1">Icon</label>
                       <input
                         type="text"
                         value={service.icon}
@@ -325,7 +329,7 @@ export default function AdminDashboard() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1">Title</label>
+                      <label className=" text-sm font-medium mb-1">Title</label>
                       <input
                         type="text"
                         value={service.title}
@@ -334,7 +338,7 @@ export default function AdminDashboard() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-1">Description</label>
+                      <label className=" text-sm font-medium mb-1">Description</label>
                       <textarea
                         value={service.description}
                         onChange={(e) => updateServiceItem(index, 'description', e.target.value)}
@@ -345,7 +349,7 @@ export default function AdminDashboard() {
 
                     {/* ✅ Background image dropdown */}
                     <div className="md:col-span-3">
-                      <label className="block text-sm font-medium mb-1">Background Image</label>
+                      <label className=" text-sm font-medium mb-1">Background Image</label>
                       <select
                         value={service.backgroundImage || ''}
                         onChange={(e) =>
@@ -386,8 +390,8 @@ export default function AdminDashboard() {
           <div className="text-black bg-white mb-8">
             <h2 className="text-xl font-semibold mb-4">Contact Section</h2>
             <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Contact Title</label>
+              <div className="grid grid-cols-[150px_1fr_auto]">
+                <label className=" text-sm font-medium mb-2">Contact Title</label>
                 <input
                   type="text"
                   value={settings?.contact?.title || ''}
@@ -404,7 +408,7 @@ export default function AdminDashboard() {
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className=" text-sm font-medium mb-2">Email</label>
                   <input
                     type="email"
                     value={settings?.contact?.email || ''}
@@ -413,7 +417,7 @@ export default function AdminDashboard() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Phone</label>
+                  <label className=" text-sm font-medium mb-2">Phone</label>
                   <input
                     type="text"
                     value={settings?.contact?.phone || ''}
@@ -422,7 +426,7 @@ export default function AdminDashboard() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Address</label>
+                  <label className=" text-sm font-medium mb-2">Address</label>
                   <textarea
                     value={settings?.contact?.address || ''}
                     onChange={(e) => updateNestedSetting('contact.address', e.target.value)}
@@ -439,7 +443,7 @@ export default function AdminDashboard() {
                 images={settings?.images}
               />
               <div>
-                <label className="block text-sm font-medium mb-2">Show Contact Form</label>
+                <label className=" text-sm font-medium mb-2">Show Contact Form</label>
                 <select
                   value={settings?.contact?.showForm ? 'true' : 'false'}
                   onChange={(e) => updateNestedSetting('contact.showForm', e.target.value === 'true')}
@@ -451,6 +455,77 @@ export default function AdminDashboard() {
               </div>
             </div>
           </div>
+
+          {/* Footer Section */}
+<div className="text-black bg-white mb-8">
+  <h2 className="text-xl font-semibold mb-4">Footer Section</h2>
+
+  <div className="grid grid-cols-[150px_1fr_auto] gap-4 mb-4">
+    <label className="text-sm font-medium">Year</label>
+    <input
+      type="text"
+      value={settings?.footer?.year || ''}
+      onChange={(e) => updateNestedSetting('footer.year', e.target.value)}
+      className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+    />
+  </div>
+
+  <div className="grid grid-cols-[150px_1fr_auto] gap-4 mb-4">
+    <label className="text-sm font-medium">Footer Text</label>
+    <input
+      type="text"
+      value={settings?.footer?.text || ''}
+      onChange={(e) => updateNestedSetting('footer.text', e.target.value)}
+      className="w-full px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+    />
+  </div>
+
+  <div className="mb-4">
+    <h3 className="text-lg font-semibold mb-2">Footer Links</h3>
+    {settings?.footer?.links?.map((link, index) => (
+      <div key={index} className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-2 items-center">
+        <input
+          type="text"
+          placeholder="Label"
+          value={link.label}
+          onChange={(e) =>
+            updateNestedSetting(`footer.links.${index}.label`, e.target.value)
+          }
+          className="px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="text"
+          placeholder="URL"
+          value={link.url}
+          onChange={(e) =>
+            updateNestedSetting(`footer.links.${index}.url`, e.target.value)
+          }
+          className="px-3 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          onClick={() => {
+            const newLinks = [...settings.footer.links]
+            newLinks.splice(index, 1)
+            updateNestedSetting('footer.links', newLinks)
+          }}
+          className="bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700"
+        >
+          Delete
+        </button>
+      </div>
+    ))}
+    <button
+      onClick={() => {
+        const newLinks = [...(settings.footer?.links || [])]
+        newLinks.push({ label: '', url: '' })
+        updateNestedSetting('footer.links', newLinks)
+      }}
+      className="mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+    >
+      Add Link
+    </button>
+  </div>
+</div>
         </div>
       </div>
     </div>

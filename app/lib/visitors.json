@@ -13,6 +13,102 @@
       "lat": 50.66192744633511,
       "lon": 17.9241943359375
     },
+    "timestamp": "2025-08-05T19:57:45.805Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-05T19:45:28.642Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-05T19:43:36.708Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-05T19:43:22.737Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-05T19:43:11.571Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-05T12:42:04.921Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
     "timestamp": "2025-08-04T08:29:27.700Z"
   },
   {

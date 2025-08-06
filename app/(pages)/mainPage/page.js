@@ -11,7 +11,7 @@ export default async function MainPage() {
 
   return (
     <div className="min-h-screen">
-       <Visitors/>
+      <Visitors />
       {/* Header */}
       <header className="bg-white shadow-md fixed w-full top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -91,7 +91,7 @@ export default async function MainPage() {
         }}
       >
         <div className="container mx-auto px-4">
-          
+
           <h2 style={{ color: settings.about.titleColor }} className="text-4xl font-bold text-center mb-12 text-gray-800">
             {settings.services.title}
           </h2>
@@ -154,7 +154,22 @@ export default async function MainPage() {
       {/* Footer */}
       <footer className="bg-black text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 {settings.site.title}. All rights reserved.</p>
+          <p>&copy; {settings.footer.year} {settings.site.title}. {settings.footer.text}</p>
+
+          {/* Links */}
+          <div className="mt-4 flex justify-center space-x-4">
+            {settings.footer.links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </footer>
     </div>

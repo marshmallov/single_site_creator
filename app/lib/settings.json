@@ -59,6 +59,24 @@
     "backgroundImage": "/images/hero4.jpg",
     "showForm": true
   },
+  "footer": {
+    "year": "2025444",
+    "text": "All rights reserved.",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/your-profile"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/your-profile"
+      },
+      {
+        "label": "site",
+        "url": "https://site"
+      }
+    ]
+  },
   "images": {
     "black": "/images/black.jpg",
     "gray": "/images/gray.jpg",

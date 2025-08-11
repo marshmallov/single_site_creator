@@ -1,5 +1,5 @@
 
-![Dashboard Screenshot](/public/images/ss1.jpg)
+![Dashboard Screenshot](/public/images/ss1.png)
 
 
 # 🖥️ Editable Single Page Website with Admin Dashboard

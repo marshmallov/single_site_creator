@@ -8,7 +8,8 @@
     "title": "Welcome to Our Website",
     "titleColor": "",
     "subtitle": "Creating amazing experiences for our users",
-    "backgroundImage": "/images/hero1.jpg",
+    "backgroundImage": "",
+    "backgroundVideo": "/videos/wlans.mp4",
     "buttonText": "Get Started",
     "buttonLink": "#about"
   },
@@ -16,7 +17,7 @@
     "title": "About Us",
     "titleColor": "#000000",
     "content": "We are a team of passionate professionals dedicated to creating exceptional digital experiences. Our mission is to help businesses grow through innovative web solutions.",
-    "image": "/images/portrait.jpg",
+    "image": "",
     "backgroundImage": "/images/white.jpg"
   },
   "services": {
@@ -56,11 +57,11 @@
     "email": "contact@example.com",
     "phone": "+1 (555) 123-4567",
     "address": "123 Main St, City, State 12345",
-    "backgroundImage": "/images/hero4.jpg",
+    "backgroundImage": "/images/laptop2.jpg",
     "showForm": true
   },
   "footer": {
-    "year": "2025444",
+    "year": "2025",
     "text": "All rights reserved.",
     "links": [
       {
@@ -79,12 +80,21 @@
   },
   "images": {
     "black": "/images/black.jpg",
+    "cards": "/images/cards.jpg",
     "gray": "/images/gray.jpg",
     "hero1": "/images/hero1.jpg",
     "hero2": "/images/hero2.jpg",
     "hero3": "/images/hero3.jpg",
     "hero4": "/images/hero4.jpg",
+    "keyboard": "/images/keyboard.jpg",
+    "laptop": "/images/laptop.jpg",
+    "laptop2": "/images/laptop2.jpg",
+    "Loading circles": "/images/Loading circles.gif",
     "portrait": "/images/portrait.jpg",
     "white": "/images/white.jpg"
+  },
+  "videos": {
+    "jellyfishes": "/videos/jellyfishes.mp4",
+    "wlans": "/videos/wlans.mp4"
   }
 }

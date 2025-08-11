@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# 🖥️ Editable Single Page Website with Admin Dashboard
+
+A **Next.js 15.3.2** application featuring:
+- **Editable single-page content**
+- **Admin authentication**
+- **Dashboard to manage content**
+- Built with **new Next.js routing systems** and **API routes**
+
+---
+
+## 🚀 Features
+- **Public View** – Visitors see the main website page.
+- **Admin Login** – Secure authentication to access the dashboard.
+- **Admin Dashboard** – Edit text, images, and sections in real-time.
+- **Responsive Design** – Works on desktop, tablet, and mobile.
+- **SEO-friendly** – Uses Next.js optimizations for speed and discoverability.
+- **Visitors** – Saves the visitors data in visitors.json and the file can be downloaded from admin dashboard.
+
+---
+
+## 📦 Tech Stack
+- **Frontend**: [Next.js 15.3.2](https://nextjs.org/) + React
+- **Styling**: Tailwind CSS (or your CSS framework)
+- **Auth**: NextAuth.js / JWT (depending on implementation)
+- **Deployment**: Vercel / Any Node.js hosting
+
 
 ## Getting Started
 

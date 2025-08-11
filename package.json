@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node app/generate-images.js",
+    "predev": "node app/generate-imgs-vids.js",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "prestart": "node app/generate-images.js",
+    "prestart": "node app/generate-imgs-vids.js",
     "start": "next start",
     "lint": "next lint"
   },

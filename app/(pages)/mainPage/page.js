@@ -37,16 +37,30 @@ export default async function MainPage() {
       </header>
 
       {/* Hero Section */}
-      <section
-        id="home"
-        className="relative text-white py-56 mt-16"
-        style={{
-          backgroundImage: `url(${settings.hero.backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <section id="home" className="relative text-white py-56 mt-16 overflow-hidden">
+        {settings.hero.backgroundVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          >
+            <source src={settings.hero.backgroundVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              backgroundImage: `url(${settings.hero.backgroundImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+        )}
+
+        <div className="absolute inset-0 bg-black opacity-40 -z-0"></div>
+
         <div className="relative container mx-auto px-4 text-center z-10">
           <h1 className="text-5xl font-bold mb-4">{settings.hero.title}</h1>
           <p className="text-xl mb-8">{settings.hero.subtitle}</p>
@@ -58,6 +72,7 @@ export default async function MainPage() {
           </a>
         </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50" style={{
@@ -128,18 +143,18 @@ export default async function MainPage() {
         backgroundPosition: 'center',
       }}>
         <div className="container mx-auto px-4">
-          <h2 style={{ color: settings.about.titleColor }} className="text-4xl font-bold text-center mb-12 text-gray-800">{settings.contact.title}</h2>
+          <h2 style={{ color: settings.contact.titleColor }} className="text-4xl font-bold text-center mb-12 text-gray-800">{settings.contact.title}</h2>
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Email</h3>
               <p className="text-gray-600">{settings.contact.email}</p>
             </div>
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Phone</h3>
+              <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Phone</h3>
               <p className="text-gray-600">{settings.contact.phone}</p>
             </div>
             <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Address</h3>
+              <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Address</h3>
               <p className="text-gray-600">{settings.contact.address}</p>
             </div>
           </div>

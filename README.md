@@ -1,4 +1,7 @@
 
+![Dashboard Screenshot](./public/ss1.jpg)
+
+
 # 🖥️ Editable Single Page Website with Admin Dashboard
 
 A **Next.js 15.3.2** application featuring:

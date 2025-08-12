@@ -24,30 +24,39 @@ A **Next.js 15.3.2** application featuring:
 
 ## 📦 Tech Stack
 - **Frontend**: [Next.js 15.3.2](https://nextjs.org/) + React
-- **Styling**: Tailwind CSS (or your CSS framework)
-- **Auth**: NextAuth.js / JWT (depending on implementation)
+- **Styling**: Tailwind CSS 
+- **Auth**: NextAuth.js 
 - **Deployment**: Vercel / Any Node.js hosting
 
 
 ## Getting Started
 
-First, run the development server:
+First, install npm:
+
+```bash
+npm install
+#or
+npm i 
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Third you need to add your data(login , pasword) in .env file 
+ADMIN_USERNAME=yourLogin
+ADMIN_PASSWORD=yourPassword
+NEXTAUTH_SECRET="-----Your Secret-----"
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+GMAIL_USER=yourmail@gmail.com
+GMAIL_APP_PASSWORD=your app pasword 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000] with your browser to see the result.
+
+You can login to admindashboard by [http://localhost:3000/adminLogin]
+
 
 ## Learn More
 

@@ -13,6 +13,54 @@
       "lat": 50.66192744633511,
       "lon": 17.9241943359375
     },
+    "timestamp": "2025-08-12T08:44:29.917Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-12T08:44:17.395Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
+    "timestamp": "2025-08-12T08:44:07.862Z"
+  },
+  {
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+    "language": "pl-PL",
+    "screen": {
+      "width": 3414,
+      "height": 1440
+    },
+    "platform": "Win32",
+    "timezone": "Europe/Warsaw",
+    "location": {
+      "lat": 50.66192744633511,
+      "lon": 17.9241943359375
+    },
     "timestamp": "2025-08-10T19:14:03.246Z"
   },
   {

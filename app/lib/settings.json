@@ -53,7 +53,8 @@
   },
   "contact": {
     "title": "Contact Us",
-    "titleColor": "#000000",
+    "titleColor": "#ffffff",
+    "secondColor": "#ffffff",
     "email": "contact@example.com",
     "phone": "+1 (555) 123-4567",
     "address": "123 Main St, City, State 12345",
@@ -82,15 +83,11 @@
     "black": "/images/black.jpg",
     "cards": "/images/cards.jpg",
     "gray": "/images/gray.jpg",
-    "hero1": "/images/hero1.jpg",
-    "hero2": "/images/hero2.jpg",
-    "hero3": "/images/hero3.jpg",
-    "hero4": "/images/hero4.jpg",
     "keyboard": "/images/keyboard.jpg",
     "laptop": "/images/laptop.jpg",
     "laptop2": "/images/laptop2.jpg",
-    "Loading circles": "/images/Loading circles.gif",
     "portrait": "/images/portrait.jpg",
+    "ss1": "/images/ss1.png",
     "white": "/images/white.jpg"
   },
   "videos": {

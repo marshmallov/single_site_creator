@@ -277,12 +277,12 @@ export default function AdminDashboard() {
                   images={settings?.images}
                 />
                 <BackgroundVideoSelector
-  section="hero"
-  label="Hero Background Video"
-  value={settings?.hero?.backgroundVideo}
-  onChange={updateNestedSetting}
-  videos={settings?.videos}
-/>
+                  section="hero"
+                  label="Hero Background Video"
+                  value={settings?.hero?.backgroundVideo}
+                  onChange={updateNestedSetting}
+                  videos={settings?.videos}
+                />
               </div>
             </div>
           )}
@@ -492,6 +492,17 @@ export default function AdminDashboard() {
                     />
                   </div>
                 </div>
+
+                <div className="grid grid-cols-[150px_1fr_auto] gap-4 items-center">
+                  <label className="text-sm font-medium">Text Color</label>
+                  <input
+                    type="color"
+                    value={settings?.contact?.secondColor || '#4B5563'}
+                    onChange={(e) => updateNestedSetting('contact.secondColor', e.target.value)}
+                    className="w-16 h-10 p-0 border rounded"
+                  />
+                </div>
+
                 <BackgroundImageSelector
                   section="contact"
                   label="Contact Background Image"

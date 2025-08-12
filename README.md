@@ -1,4 +1,4 @@
-
+![Website Screenshot](/public/images/ss2.png)
 ![Dashboard Screenshot](/public/images/ss1.png)
 
 
@@ -9,6 +9,7 @@ A **Next.js 15.3.2** application featuring:
 - **Admin authentication**
 - **Dashboard to manage content**
 - Built with **new Next.js routing systems** and **API routes**
+- **Saves visitors data in json file that can be downloaded** 
 
 ---
 

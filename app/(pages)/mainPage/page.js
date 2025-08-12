@@ -147,18 +147,20 @@ export default async function MainPage() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-6">
               <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-gray-600">{settings.contact.email}</p>
+              <p style={{ color: settings.contact.secondColor }} className="">{settings.contact.email}</p>
             </div>
             <div className="mb-6">
               <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Phone</h3>
-              <p className="text-gray-600">{settings.contact.phone}</p>
+              <p style={{ color: settings.contact.secondColor }} className="">{settings.contact.phone}</p>
             </div>
             <div className="mb-6">
               <h3 style={{ color: settings.contact.titleColor }} className="text-xl font-semibold mb-2">Address</h3>
-              <p className="text-gray-600">{settings.contact.address}</p>
+              <p style={{ color: settings.contact.secondColor }} className="">{settings.contact.address}</p>
             </div>
           </div>
         </div>
+
+
         {settings.contact.showForm && (
           <div className="mt-8">
             <ContactForm />

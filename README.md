@@ -53,6 +53,7 @@ NEXTAUTH_SECRET="-----Your Secret-----"
 
 GMAIL_USER=yourmail@gmail.com
 GMAIL_APP_PASSWORD=your app pasword 
+RECEIVER_EMAIL = "your receiver email"
 
 Open [http://localhost:3000] with your browser to see the result.
 

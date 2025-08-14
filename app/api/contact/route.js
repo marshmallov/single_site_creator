@@ -23,7 +23,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: email,
-      to: 'mar.s.job@outlook.com', // You can also use process.env.RECEIVER_EMAIL
+      to: process.env.RECEIVER_EMAIL, // You can also use process.env.RECEIVER_EMAIL
       subject: `New Contact Message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>

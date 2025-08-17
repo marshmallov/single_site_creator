@@ -31,8 +31,10 @@ A **Next.js 15.3.2** application featuring:
 
 
 ## Getting Started
+First you need to have Node.js instaled 
+https://nodejs.org/en/download
 
-First, install npm:
+Second, install npm:
 
 ```bash
 npm install
@@ -40,13 +42,14 @@ npm install
 npm i 
 ```
 
-Second, run the development server:
+Third, run the development server:
 
 ```bash
 npm run dev
 ```
 
-Third you need to add your data(login , pasword) in .env file 
+Then, you need to add your data(login , pasword) in .env file 
+
 ADMIN_USERNAME=yourLogin
 ADMIN_PASSWORD=yourPassword
 NEXTAUTH_SECRET="-----Your Secret-----"
